@@ -7,7 +7,7 @@ host = "127.0.0.1"
 user = "root"
 password = ""
 port = 3306
-db = "mobilemind_erp"
+db = "mydb"
 opts, args = getopt.getopt(sys.argv[1:], 'h:u:p:P:d:')
 
 for opt, arg in opts:
@@ -39,10 +39,6 @@ print(message)
 
 while True:
 	try:
-		print "host--",host
-		print "user--",user
-		print "password--",password
-		print "port--",port
 		conn = MySQLdb.connect(host=host, user=user, passwd=password , port=port)
 		while True:
 			cursor = conn.cursor()
